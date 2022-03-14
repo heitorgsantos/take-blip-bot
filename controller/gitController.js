@@ -9,4 +9,3 @@ const  { fetchApiService  } = require('../service/fetchApiService');
     }
   }
   module.exports = { searchGitHub }
-  
