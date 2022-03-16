@@ -5,7 +5,7 @@ const error = require('../utils/constructorError');
 const fetchApiService = async() => {
   const response = await instance.get('takenet/repos')
   const date = response.data;
-  if(!date) throw error(404, 'Not found');
+  if(!date) throw error(404, { message: 'Not found' });
   const searchData = await date.sort(function(a,b) {
     const date1 = new Date(a.created_at);
     const date2 = new Date(b.created_at);
